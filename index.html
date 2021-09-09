@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,300&family=Roboto:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Password <span class="genTxt">Generator</span></h1>
+      <textarea
+        readonly
+        id="password"
+        aria-label="Generated Password"
+      ></textarea>
+      <form class="pwdGenForm">
+        <div class="option">
+          <label for="numOfCharacter" class="labelTxt"
+            >Number of Characters</label
+          >
+          <input type="number" id="pwdLength" min="8" max="128" value="12" />
+        </div>
+
+        <div class="option">
+          <label for="includeLowercase" class="labelTxt"
+            >Include Lowercase</label
+          >
+          <input type="checkbox" id="includeLowercase" />
+        </div>
+
+        <div class="option">
+          <label for="includeUppercase" class="labelTxt"
+            >Include Uppercase</label
+          >
+          <input type="checkbox" id="includeUppercase" />
+        </div>
+
+        <div class="option">
+          <label for="includeNumeric" class="labelTxt">Include Numeric</label>
+          <input type="checkbox" id="includeNumeric" />
+        </div>
+
+        <div class="option">
+          <label for="includeSpecChar" class="labelTxt"
+            >Include Special Characters</label
+          >
+          <input type="checkbox" id="includeSpecChar" />
+        </div>
+      </form>
+      <!-- <div class="option"> -->
+      <button type="submit" id="generate" class="btn">Generate Password</button>
+      <!-- </div> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
